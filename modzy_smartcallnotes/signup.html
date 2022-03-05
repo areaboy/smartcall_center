@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="" />
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<style>
+
+
+.register_btn{
+padding:10px;
+color:white;
+background:#3b5998;
+border:none;
+cursor;pointer;
+
+}
+
+
+.register_btn:hover{
+background:black;
+color:orange;
+}
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#3b5998;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.navgate101:hover{
+background:#ec5574;
+color:black;
+
+}
+
+
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#3b5998;
+    //color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+.contact_info{
+
+background:#ec5574;
+color:white;
+cursor: pointer;
+padding:16px;
+border-radius: 10%;
+
+}
+.contact_info:hover{
+background: orange;
+color:black;
+
+}
+
+
+.contact_info_dashedline{
+  border-bottom: 5px dashed #3b5998;
+
+}
+
+
+.category_post{
+background-color: #3b5998;
+padding: 16px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+.access{
+border-style: solid; border-width:4px; border-color:white;color:white;font-size:14px;
+}
+
+.access:hover{
+color:black;
+
+}
+
+
+</style>
+
+
+
+
+
+
+        <script>
+
+
+
+            $(function () {
+                $('#save_btn').click(function () {
+                     var user_rank = $('#user_rank').val();
+                    var email = $('#email').val();
+                    var password = $('#password').val();
+                    var confirm_password =$('#confirm-password').val();
+                    var fullname = $('#fullname').val();
+                    var emailaddress_pot = $('#emailaddress_pot').val();
+
+                    //preparing Email for validations
+                    var atemail = email.indexOf("@");
+                    var dotemail = email.lastIndexOf(".");
+
+
+
+if(password != confirm_password){
+alert('Password Does not Match');
+return false;
+}
+
+if(email==""){
+alert('please Enter Email Address');
+}
+
+
+else  if (atemail < 1 || ( dotemail - atemail < 2 )){
+alert("Please enter valid email Address")
+}
+
+else if(password==""){
+alert('please Enter Password');
+}
+
+else if(fullname==""){
+alert('please Enter Your Fullname');
+}
+
+else if(user_rank==""){
+alert('please Enter Your Profession');
+}
+
+else{
+
+          var form_data = new FormData();
+          form_data.append('email', email);
+          form_data.append('fullname', fullname);
+          form_data.append('password', password);
+          form_data.append('emailaddress_pot', emailaddress_pot);
+                    $('#btn').attr('disabled', 'disabled');
+                    $('#loader').fadeIn(400).html('<br><span class="well" style="color:black"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait, Your Data is being Submitted</span>');
+                    $.ajax({
+                        url: 'signup_action.php',
+                        data: form_data,
+                        processData: false,
+                        contentType: false,
+crossDomain: true,
+                        cache: false,
+                        type: 'POST',
+                        success: function (msg) {
+                                $('#box').val('');
+				$('#loader').hide();
+				$('.result_data').fadeIn('slow').prepend(msg);
+				$('#alertdata_uploadfiles').delay(5000).fadeOut('slow');
+                                $('#alerts_reg').delay(5000).fadeOut('slow');
+                                $('#alertdata_uploadfiles2').delay(20000).fadeOut('slow');
+                                $('#save_btn').removeAttr('disabled');
+
+
+//strip all html elemnts using jquery
+var html_stripped = jQuery(msg).text();
+//alert(html_stripped);
+
+//check occurrence of word (successfully) from backend output already html stripped.
+var Frombackend = html_stripped;
+var bcount = (Frombackend.match(/successfully/g) || []).length;
+//alert(bcount);
+
+if(bcount > 0){
+$('#email').val('');
+$('#fullname').val('');
+$('#password').val('');
+$('#confirm-password').val('');
+}
+
+
+
+
+                        }
+                    });
+} // end if validate
+                });
+            });
+
+
+
+
+// start checking for username availability
+$(document).ready(function(){
+    $('#username').keyup(function(){
+        //var username = $(this).val(); 
+       var username = $('#username').val();
+ if(username.length < 2) {
+// ensure that user must type something first at least 2 characters before fetching database records
+return false;
+}
+       var token = 101201;
+        var ShowResult = $('#username_check');
+            ShowResult.html('<div style="background:orange;color:white;padding:10px;">Checking Username Availability...<i class="fa fa-spinner fa-spin" style="font-size:20px"></i>  </div>'); // you can use loading animation here
+           var datasend = "username="+ username + "&token=" + token;
+            $.ajax({
+            type : 'POST',
+            data : datasend,
+            url  : 'username_check.php',
+            success: function(data){
+             $('#alertdata').delay(5000).fadeOut('slow');
+                if(data == 0){
+  ShowResult.html('<br><span id="alertdata" class="well alert alert-success"><font color=green>This Username <b>('+username+')</b> is Available</font></span>');
+                }
+                else if(data > 0){
+  ShowResult.html('<br><span class="well alert alert-warning"><font color=red>This Username <b>('+username+')</b> is Taken....</font></span>');
+                }
+                else{
+  ShowResult.html('<br><span id="alertdata" class="well alert alert-warning"><font color=red>We have problem with your Query.</font></span>');
+                }
+            }
+
+            });
+    });
+});
+
+// end checking for username availability
+
+
+
+
+// start checking for email availability
+$(document).ready(function(){
+    $('#email').keyup(function(){ 
+       var email = $('#email').val();
+ if(email.length < 2) {
+// ensure that user must type something first at least 2 characters before fetching database records
+return false;
+}
+       var token = 101201;
+        var ShowResult1 = $('#email_check');
+            ShowResult1.html('<div style="background:#800000;color:white;padding:10px;">Checking Email Availability... <i class="fa fa-spinner fa-spin" style="font-size:20px"></i>  </div>'); // you can use loading animation here
+           var datasend = "email="+ email + "&token=" + token;
+            $.ajax({
+            type : 'POST',
+            data : datasend,
+            url  : 'email_check.php',
+            success: function(data){
+
+                if(data == 0){
+  ShowResult1.html('<br><span class="well alert alert-success"><font color=green>This Email Address <b>('+email+')</b> is Available</font></span>');
+                }
+                else if(data > 0){
+  ShowResult1.html('<br><span class="well alert alert-warning"><font color=red>This Email Address <b>('+email+')</b> is Taken....</font></span>');
+                }
+                else{
+  ShowResult1.html('<br><span class="well alert alert-warning"><font color=red>We have problem with your Query.</font></span>');
+                }
+            }
+
+            });
+    });
+});
+
+// end checking for email availability
+
+        </script>
+
+
+ <style>
+.upload_progress{
+padding:10px;
+background:green;
+color:white;
+cursor:pointer;
+min-width:30px;
+}
+
+#imageupload_preview
+{
+max-height:200px;
+max-width:200px;
+}
+</style>
+ 
+</head>
+<body>
+
+
+<!-- start column nav-->
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+      <ul class="nav navbar-nav navbar-right">
+
+<li class="navgate img-circle"><a  class="img-circle access" href="index.html">Home</a></li>
+
+
+<li class="navgate img-circle"><a  class="img-circle access" href="login.html">Login</a></li>
+
+
+      </ul>
+
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+    <div class="">
+
+
+<!-- about Section start-->
+<div  class="about section_padding aboutus_bgcolor" style=''>
+
+<br>
+
+
+<p class="" style='font-size:46px;color:#ec5574;font-family:comic sans ms;'>Smart Call Center</p>
+
+
+<div class='row'>
+
+
+<div class='col-sm-3'></div>
+
+
+<div class='col-sm-6' style='background:#ddd;'>
+
+  <h2 class="text-center"><span class="contact_name_color" style='font-size:30px;color:#ec5574;font-family:comic sans ms;'>
+Sign Up</span></h2>
+
+<!--start form-->
+<form id="" method="post">
+
+
+
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="email">
+<span class="fa fa-envelope-o"></span>Email</label>
+              <input type="text" class="col-sm-12 form-control" id="email" name="email" placeholder="Enter email">
+<div class="result1" id="email_check"></div>
+            </div>
+
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="psw">
+<span class="fa fa-eye"></span> Password</label>
+              <input type="password" class="col-sm-12 form-control" id="password" name="password" placeholder="Enter password">
+            </div>
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="psw">
+<span class="fa fa-eye"></span> Confirm Password</label>
+              <input type="password" class="col-sm-12 form-control" id="confirm-password" name="confirm-password" placeholder=" Confirm Password">
+            </div>
+
+
+<style>
+.secured_pot{ display:none; } /* hide because is spam protection */
+</style>
+<input class="secured_pot" type="text" name="emailaddress_pot" id="emailaddress_pot" />
+
+
+
+
+<div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="fullname">
+<span class="fa fa-male"></span> FullName</label>
+              <input type="text" class="col-sm-12 form-control" id="fullname" name="fullname" placeholder="Enter Full Name">
+            </div>
+
+
+
+                    <div class="form-group">
+                            <div class="upload_progress" style="width:0%">0%</div>
+
+                        <div id="loader"></div>
+                        <div class="result_data"></div>
+                    </div>
+
+                    <input type="button" id="save_btn" class="pull-right register_btn" value="Register" />
+                </form>
+
+<!--end form-->
+
+
+
+
+
+</div>
+
+
+<div class='col-sm-3'></div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+
+        <div class="col-sm-12">
+
+<p class="footer_text1">Smart Call Center</p>
+<p class="footer_text2">Powered by Rev AI and Modzy AI....</p>
+<br>
+
+
+        </div>
+
+ 
+</div>
+
+
+
+</div>
+
+<div class="footer_text1">
+<p class="footer_text1"></p>
+</div>
+
+
+<div class="footer_dashedline"></div>
+
+ </footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+ 
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

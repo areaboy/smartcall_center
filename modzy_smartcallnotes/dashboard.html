@@ -1,0 +1,1835 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+
+
+var userid_sess_call = sessionStorage.getItem('useridcall');
+//alert(userid_sess_call);
+if (userid_sess_call == null || userid_sess_call == undefined) {
+  alert('Hey You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+var userid_sess_call = sessionStorage.getItem('useridcall');
+var fullname_sess_call = sessionStorage.getItem('fullnamecall');
+var email_sess_call = sessionStorage.getItem('emailcall');
+var ownerid_sess_call = sessionStorage.getItem('owneridcall');
+
+//var vv = sessionStorage.getItem('emailcall');
+//alert(vv);
+
+/*
+
+var rec = "<span>" +
+"<img src='uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: #ec5574;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+*/
+$('.myd_fullname_sess').html(fullname_sess_call);
+$('.myd_userid_sess').html(userid_sess_call);
+//$('.myd_userid_sess_value').val(userid_sess_call).value;
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#3b5998;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #3b5998;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#3b5998;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+.c_btn{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.c_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+	  
+
+
+	  <li>
+<a>
+<button class="category_post" data-toggle="modal" data-target="#myModal_settings" 
+title="Application Settings" >
+<i  style="color:white;font-size:30px;" class="fa fa-gear" aria-hidden="true"></i>Settings</button></a>
+</li>
+
+
+	  
+	  <li>
+<a>
+<button class="category_post" data-toggle="modal" data-target="#myModal_add" 
+title="Upload Audio Voice Records" >
+<i  style="color:white;font-size:30px;" class="fa fa-edit" aria-hidden="true"></i>Upload Audio <br>Voice Records</button></a>
+</li>
+
+
+
+<li>
+<a>
+<button class="category_post" data-toggle="modal" data-target="#myModal_search" 
+title="Search Audio Voice Records" >
+<i  style="color:white;font-size:30px;" class="fa fa-search" aria-hidden="true"></i>Search Audio <br>Voice Records</button></a>
+</li>
+
+           
+
+             
+ <li class="navgate_no">
+<a title=''  style="color:white;font-size:14px;" ><button class="category_post">
+Welcome: <br>(<span class='myd_fullname_sess'></span>)
+</button></a>
+</li>
+
+
+
+</li>       
+<li class="navgate_no"><a title='Logout' href="logout.html" style="color:white;font-size:14px;"><button class="category_post">Logout <span style='font-size:30px;color:white;' class='fa fa-sign-out'></span></button></a></li>
+
+
+
+
+
+
+
+      </ul>
+
+
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+.myform_btn_css{
+background:#ec5574;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+}
+
+
+.myform_btn_css:hover{
+background:orange;color:white;
+
+}
+
+.css_action{
+background:#800000;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+max-width:30%;
+}
+
+
+.css_action:hover{
+background:orange;color:white;
+
+}
+
+</style>
+
+<!-- start-->
+
+<div>
+
+
+
+
+<script>
+
+   $(document).ready(function(){
+//$(".reloadPage").click(function(){
+$(document).on( 'click', '.reloadPage', function(){ 
+
+location.reload();
+
+});
+
+});
+
+
+
+
+
+var user_id = sessionStorage.getItem('useridcall');
+//alert(user_id);
+        var page_row_call =5;
+
+        $(document).ready(function(){
+
+            loadData();
+
+$("#loader_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+
+            $("#loadmore_btn").click(function(){
+
+
+
+  //var id = $("#id").val();
+                var queryid = Number($("#form_queryid").val());
+                var querytotal = Number($("#form_querytotal").val());
+                queryid += page_row_call;
+                if(queryid <= querytotal){
+               
+                    $("#form_queryid").val(queryid);
+                    loadData();
+                }
+
+                if(queryid >= querytotal){
+               
+                   alert('No More Content to Load');
+$("#nomore_content_check").html("<div style='background:purple;color:white;padding:10px;'>No More Content to Load <br> <center><button style='background:#3b5998;border:none;color:white;padding:10px;cursor:pointer' title='Refresh Page' class='reloadPage'>Refresh Page</button></center> </div>");   
+$('#loader_post').hide();
+                }
+
+
+            });
+        });
+
+        function loadData(){
+            var queryid = $("#form_queryid").val();
+            var querytotal = $("#form_querytotal").val();
+            
+
+$("#loader_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Contents <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $.ajax({
+                url:'content_load.php',
+                type:'post',
+                data:{queryid:queryid,page_row_call:page_row_call, user_id:user_id},
+                dataType:'json',
+                success:function(response){
+
+//alert(response);
+
+if(response ==11){
+//alert('No Audio Call/Voice has been Uploaded by You yet');
+$("#pcheck").html("<div style='background:red;color:white;padding:10px;'>No Audio Call/Voice has been Uploaded by You yet....</div>");   
+$("#loader_posts").hide();
+return false;
+}
+           
+
+                    loadAllContent(response);
+
+$("#loader_posts").hide();
+//$("#result_posts1").html(response);
+//setTimeout(function(){ $('#result_posts').html(''); }, 5000);	
+
+
+
+                }
+            });
+
+        }
+
+        function loadAllContent(data){
+
+            var len1 = data.length;
+
+
+
+            for(var i=0; i<len1; i++){
+                if(i == 0){
+                    var querytotal = data[i]['allcount'];
+                    $("#form_querytotal").val(querytotal);
+                }else{
+
+var id = data[i]['id'];
+var title = data[i]['title'];
+var audio_name = data[i]['tname'];
+var messages = data[i]['messages'];
+var messages1 = data[i]['messages1'];
+var timer = data[i]['timer'];
+var userid = data[i]['userid'];
+var ownerid = data[i]['ownerid'];
+var status = data[i]['status'];
+var job_id= data[i]['job_id'];
+var identity = data[i]['identity'];
+
+/*
+if(id != ''){
+var status_color = 'green';
+}
+*/
+
+var rec = "<div  class='well'  id='contents_data' >" +  
+        
+
+//"<img style='border-style: solid; border-width:3px; border-color:#3b5998; width:60px;height:60px; max-width:60px;max-height:60px;border-radius: 50%;' src='uploads/" + userphoto +"' />" +
+
+"<div style='color:black;font-size:18px'><b>Audio Title: </b>"+title+"</div>" +
+ "<div style='font-size:14px;color:black;'><b>Audio Name:</b> " + audio_name + "</div>" +
+ "<div style='font-size:14px;color:black;'><b>Contents:</b> " + messages + "</div>" +
+"<div style='display:none;' align='center'>"+id+"<input type=text name='id' id='id' value='"+title+"'></div>" +
+ 
+  "<span><b> <span style='color:#3b5998' class='fa fa-calendar'></span>Time:</b> </span>" +
+"<b><span data-livestamp='" + timer + "'></span></b><br>"+
+
+"<br><a style='width:30%;' href='dashboard_query.html?id="+ id +"&identity="+ identity +"'  title='View and Analyze Audio Call Contents'  class='btn_action_no css_action'><span style='font-size:20px;color:black;' class='fa fa-plus-globe'></span>View and  Analyze Audio Calls Contents </a>"+  
+
+
+"<div class='row'>"+
+
+
+
+"</div>"+
+
+
+"<div style='background:#eeeeee'>" +
+"</div></div>";
+
+ $("#res_data").append(rec);
+
+$("#loader_posts").hide();
+
+                }
+            }
+        }
+
+
+
+// loading contents ends here
+
+
+
+
+
+
+//start updates
+
+$(document).ready(function(){
+//$('.btn_action').click(function(){
+$(document).on( 'click', '.btn_action', function(){ 
+
+
+
+var id = $(this).data('id');
+var title = $(this).data('title');
+var name = $(this).data('audio_name');
+var userid = $(this).data('userid');
+var ownerid = $(this).data('ownerid');
+var status = $(this).data('status');
+var job_id = $(this).data('job_id');
+var identity = $(this).data('identity');
+var messages = $(this).data('messages');
+var timer = $(this).data('timer');
+
+
+
+$('.idz').html(id);
+$('.titlez').html(title);
+$('.namez').html(name);
+$('.useridz').html(userid);
+$('.statusz').html(status);
+$('.job_idz').html(job_id);
+$('.identityz').html(identity);
+$('.messagesz').html(messages);
+
+
+
+$('.idy').val(id).value;
+$('.titley').val(title).value;
+$('.namey').val(name).value;
+$('.useridy').val(userid).value;
+$('.statusy').val(status).value;
+$('.job_idy').val(job_id).value;
+$('.identityy').val(identity).value;
+$('.messagesy').val(messages).value;
+
+
+
+  var tm= "<span><b> <span style='color:#3b5998' class='fa fa-calendar'></span>Time:</b> </span>" +
+"<b><span data-livestamp='" + timer + "'></span></b><br>";
+$('.timerz').html(tm);
+		
+	})
+
+
+});
+//end updates
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<br><br><br>
+
+
+
+<!-- start loading content --->
+<br />
+<div id="content">
+   
+   
+  
+        <div id="res_data"></div>
+<div id="nomore_content_check"></div>
+<div id="loader_check"></div>
+<div id="result_check"></div>
+
+
+<div id="pcheck"></div>
+
+        <div id="">
+            <input type="hidden" id="form_queryid" value="0" />
+            <input type="hidden" id="form_querytotal" value="0" />
+
+<div id="loader_posts"></div><br>
+<input type="button" style='width:100%' title='LoadMore Content' class="button myform_btn_css" value="LoadMore Content" id="loadmore_btn" />
+ 
+        </div>
+    </div>
+
+
+
+
+<!-- ends loading contents-->
+
+
+</div>
+<!-- ends-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add data modal starts here -->
+
+
+<div class="container_search_post_modal">
+
+  <div class="modal fade " id="myModal_add" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 pull-right1 modaling_sizing1">
+      <div class="modal-content">
+        <div class="modal-header" style="color:black;background:#c1c1c1">
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+      <h4 class="modal-title">Upload Audio Voice Calls Records</h4>
+        </div>
+        <div class="modal-body">
+
+
+
+<div style='background:#ddd;color:black;padding:10px;border-style: dashed; border-width:2px; border-color: orange;'>
+
+
+<h4> You can process Audio Call Contents in two(2) ways. Either by Sending the URL Containing the Audio File or by Browsing The Audio File Locations and then uploads
+</h4>
+
+<h2><center>Option A</center></h2>
+
+Enter The URL Containing the Audio File That You want you want to Process.
+<!--start Form O-->
+
+
+<script>
+
+
+
+            $(function () {
+                $('#url_btn').click(function () {
+                     var title = $('#title_url').val();
+                    var file_url = $('#file_url').val();
+                    
+                  
+
+var userid = sessionStorage.getItem('useridcall');
+var ownerid = sessionStorage.getItem('owneridcall');
+
+// start if validate
+if(file_url==""){
+alert('please Select .mp3, .flac, .alac audio File url');
+}
+
+else if(title==""){
+alert('please Enter File Title name');
+}
+
+else{
+
+
+var str = file_url;
+var n = str.lastIndexOf('/');
+var res = str.substring(n + 1);
+var filename = res;
+ 
+
+//get extension
+
+var str1 = res;
+var n1 = str1.lastIndexOf('.');
+var ext = str1.substring(n1 + 1);
+
+
+//alert(ext);
+
+// add double quotes around the variables
+var fileExtention_quotes = ext;
+fileExtention_quotes = "'"+fileExtention_quotes+"'";
+
+ var allowedtypes = ["mp3", "MP3", "flac", "FLAC"];
+    if(allowedtypes.indexOf(ext) !== -1){
+//alert('Good this is a valid content');
+}else{
+alert("Please a Enter Valid Audio File URL with .mp3 or .flac audio File extenstion.");
+return false;
+    }
+
+
+
+          var form_data = new FormData();
+          form_data.append('file_url', file_url);
+          form_data.append('title', title);
+form_data.append('userid', userid);
+form_data.append('ownerid', ownerid);
+form_data.append('filename', filename);
+                    //$('.upload_progress').css('width', '0');
+                    //$('#upload_btn').attr('disabled', 'disabled');
+                    $('#loader_url').fadeIn(400).html('<br><span class="well" style="color:black"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait, Your Data is being Submitted</span>');
+                    $.ajax({
+                        url: 'audio_process_url.php',
+                        data: form_data,
+                        processData: false,
+                        contentType: false,
+crossDomain: true,
+                        cache: false,
+                        type: 'POST',
+                        
+                        success: function (msg) {
+                                $('#box').val('');
+				$('#loader_url').hide();
+				$('.result_data_url').fadeIn('slow').prepend(msg);
+				$('#alertdata_uploadfiles').delay(5000).fadeOut('slow');
+                                $('#alerts_reg').delay(5000).fadeOut('slow');
+                                $('#alertdata_uploadfiles2').delay(20000).fadeOut('slow');
+                                //$('#upload_btn').removeAttr('disabled');
+
+
+//strip all html elemnts using jquery
+var html_stripped = jQuery(msg).text();
+//alert(html_stripped);
+
+//check occurrence of word (successfully) from backend output already html stripped.
+var Frombackend = html_stripped;
+var bcount = (Frombackend.match(/successfully/g) || []).length;
+//alert(bcount);
+
+if(bcount > 0){
+//$('#file_url').val('');
+//$('#title_url').val('');
+}
+
+
+
+
+                        }
+                    });
+} // end if validate
+                });
+            });
+
+
+
+
+</script>
+
+
+
+
+
+
+<div class='data_hide'>
+<form id="" method="post">
+<div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="title">
+<span class="fa fa-edit"></span> Audio Title Name</label>
+              <input type="text" class="col-sm-12 form-control" id="title_url" name="title_url" placeholder="Enter Audio Title Name">
+            </div>
+
+
+
+<div class="form-group">
+<label style='font-size:16px;padding:6px;'>Enter Audio  File URL( Allowed File Type: .flac or .mp3 file): </label>
+<br>
+<b>Sample 1:</b>&nbsp;&nbsp;&nbsp;&nbsp;  https://www.fredjarsoft.com/modzy_flac_audio.flac<br>
+<b>Sample 2:</b>&nbsp;&nbsp;&nbsp;&nbsp;  https://www.fredjarsoft.com/modzy_mp3_audio.mp3<br><br>
+
+<input style="" class="col-sm-12 form-control" type="text" id="file_url" name="file_url" placeholder="Enter Audio  File URL" value="" />
+</div>
+
+
+
+
+                    <div class="form-group">
+                            
+                        <div id="loader_url"></div>
+                       
+                    </div>
+
+                    <input type="button" id="url_btn" class="pull-right c_btn" value="Submit File Now" />
+                </form>
+<br><br>
+</div>
+
+
+
+
+ <div class="result_data_url"></div>
+
+
+<!--End form 0-->
+
+
+
+
+
+
+
+
+<!--form START-->
+
+
+
+
+<style>
+.upload_progress{
+padding:10px;
+background:green;
+color:white;
+cursor:pointer;
+min-width:30px;
+}
+
+#imageupload_preview
+{
+max-height:200px;
+max-width:200px;
+}
+</style>
+         <script>
+
+
+
+            $(function () {
+                $('#upload_btn').click(function () {
+                     var title = $('#title').val();
+                    var file_fname = $('#file_content').val();
+                    var emailaddress_pot = $('#emailaddress_pot').val();
+
+                  
+
+var userid = sessionStorage.getItem('useridcall');
+var ownerid = sessionStorage.getItem('owneridcall');
+
+// start if validate
+if(file_fname==""){
+alert('please Select .mp3, .flac, .alac audio File to Upload');
+}
+
+else if(title==""){
+alert('please Enter File Title name');
+}
+
+else{
+
+var fname=  $('#file_content').val();
+var ext = fname.split('.').pop();
+//alert(ext);
+
+// add double quotes around the variables
+var fileExtention_quotes = ext;
+fileExtention_quotes = "'"+fileExtention_quotes+"'";
+
+ var allowedtypes = ["mp3", "MP3", "flac", "FLAC", "alac", "ALAC"];
+    if(allowedtypes.indexOf(ext) !== -1){
+//alert('This file is allowed');
+}else{
+alert("Please Upload a Valid .mp3, .flac voice/audio Files");
+return false;
+    }
+
+          var form_data = new FormData();
+          form_data.append('file_content', $('#file_content')[0].files[0]);
+          form_data.append('file_fname', file_fname);
+          form_data.append('title', title);
+          form_data.append('emailaddress_pot', emailaddress_pot);
+form_data.append('userid', userid);
+form_data.append('ownerid', ownerid);
+                    $('.upload_progress').css('width', '0');
+                    //$('#upload_btn').attr('disabled', 'disabled');
+                    $('#loader').fadeIn(400).html('<br><span class="well" style="color:black"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait, Your Data is being Submitted</span>');
+                    $.ajax({
+                        url: 'audio_process.php',
+                        data: form_data,
+                        processData: false,
+                        contentType: false,
+crossDomain: true,
+                        cache: false,
+                        type: 'POST',
+                        xhr: function () {
+                      //var xhr = new window.XMLHttpRequest();
+                            var xhr = $.ajaxSettings.xhr();
+                            xhr.upload.addEventListener("progress", function (event) {
+                                var upload_percent = 0;
+                                var upload_position = event.loaded;
+                                var upload_total  = event.total;
+
+                                if (event.lengthComputable) {
+                                    var upload_percent = upload_position / upload_total;
+                                    upload_percent = parseInt(upload_percent * 100);
+                                  //upload_percent = Math.ceil(upload_position / upload_total * 100);
+                                    $('.upload_progress').css('width', upload_percent + '%');
+                                    $('.upload_progress').text(upload_percent + '%');
+                                }
+                            }, false);
+                            return xhr;
+                        },
+                        success: function (msg) {
+                                $('#box').val('');
+				$('#loader').hide();
+				$('.result_data').fadeIn('slow').prepend(msg);
+				$('#alertdata_uploadfiles').delay(5000).fadeOut('slow');
+                                $('#alerts_reg').delay(5000).fadeOut('slow');
+                                $('#alertdata_uploadfiles2').delay(20000).fadeOut('slow');
+                                //$('#upload_btn').removeAttr('disabled');
+
+
+//strip all html elemnts using jquery
+var html_stripped = jQuery(msg).text();
+//alert(html_stripped);
+
+//check occurrence of word (successfully) from backend output already html stripped.
+var Frombackend = html_stripped;
+var bcount = (Frombackend.match(/successfully/g) || []).length;
+//alert(bcount);
+
+if(bcount > 0){
+//$('#file_fname').val('');
+//$('#title').val('');
+}
+
+
+
+
+                        }
+                    });
+} // end if validate
+                });
+            });
+
+
+
+
+</script>
+
+
+
+
+
+<!--start form-->
+<div class='data_hide'>
+<form id="" method="post">
+`
+
+<h2><center>Option B</center></h2>
+Upload Audio Files by browsing the File Locations<br>
+<div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="title">
+<span class="fa fa-edit"></span> Audio Title Name</label>
+              <input type="text" class="col-sm-12 form-control" id="title" name="title" placeholder="Enter Audio Title Name">
+            </div>
+
+
+
+<div class="form-group">
+<label style='font-size:16px;padding:6px;'>Upload Audio Call File(.flac or .mp3 file): </label>
+<input style="background:#c1c1c1;" class="col-sm-12 form-control" type="file" id="file_content" name="file_content" />
+</div>
+
+
+
+<style>
+.secured_pot{ display:none; } /* hide because is spam protection */
+</style>
+<input class="secured_pot" type="text" name="emailaddress_pot" id="emailaddress_pot" />
+
+
+
+
+
+                    <div class="form-group">
+                            <div class="upload_progress" style="width:0%">0%</div>
+
+                        <div id="loader"></div>
+                       
+                    </div>
+
+                    <input type="button" id="upload_btn" class="pull-right c_btn" value="Upload Now" />
+                </form>
+<br><br>
+</div>
+
+
+ <div class="result_data"></div>
+<!--form ENDS-->
+
+
+        </div>
+        <div class="modal-footer" style="color:black;background:#c1c1c1">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  Add data modal ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- settings modal starts here -->
+
+
+<div class="container_search_post_modal">
+
+  <div class="modal fade " id="myModal_settings" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 pull-right1 modaling_sizing1">
+      <div class="modal-content">
+        <div class="modal-header" style="color:black;background:#c1c1c1">
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+      <h4 class="modal-title">Application Settings</h4>
+        </div>
+        <div class="modal-body">
+
+
+
+<div style='background:#ddd;color:black;padding:10px;border-style: dashed; border-width:2px; border-color: orange;'>
+
+<!--form START-->
+
+
+
+         <script>
+
+           
+
+$(document).ready(function(){
+var tt=1;
+
+var useridxa = sessionStorage.getItem('useridcall');
+var owneridxa = sessionStorage.getItem('owneridcall');
+
+
+$("#loader_ssx").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait,Loading Settings...</div>');
+var datasend = {tt:tt, useridxa:useridxa, owneridxa:owneridxa};
+
+	
+		$.ajax({
+			
+			type:'POST',
+			url:'settings_load.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader_ssx").hide();
+$("#result_ssx").html(msg);
+//setTimeout(function(){ $('#result_ss').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<!--start form-->
+
+<div id="loader_ssx"></div>
+<div id="result_ssx"></div>
+
+
+<!--form ENDS-->
+
+
+        </div>
+        <div class="modal-footer" style="color:black;background:#c1c1c1">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  settings modal ends here -->
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_search').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_search').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+
+
+
+</script>
+
+
+
+<!-- search data modal starts here -->
+
+
+<div class="container_search_post_modal">
+
+  <div class="modal fade " id="myModal_search" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 pull-right1 modaling_sizing1">
+      <div class="modal-content">
+        <div class="modal-header" style="color:black;background:#c1c1c1">
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+      <h4 class="modal-title">Audion Contens/File Search Engine</h4>
+        </div>
+        <div class="modal-body">
+
+<h4>Search Audio Content by Title Name</h4><br>
+
+
+<div style='background:#ddd;color:black;padding:10px;border-style: dashed; border-width:2px; border-color: orange;'>
+
+<!--form START-->
+
+
+
+        <script>
+
+
+
+// start searching
+$(document).ready(function(){
+    $('.search_m_btn').keyup(function(){ 
+     
+
+var search_data_m = $(this).val();
+//var search_data_m = $('#search_data').val();
+
+var uid = sessionStorage.getItem('useridcall');
+
+ if(search_data_m.length < 2) {
+// ensure that user must type something first at least 2 characters before fetching database records
+return false;
+}
+       var token = 101201;
+$('#loader_search_m').fadeIn(400).html('<div style="background:orange;color:black;padding:10px;">Please Waiting Searching Data... <i class="fa fa-spinner fa-spin" style="font-size:20px"></i> </div>');
+
+ var ShowResult = $('#search_text');
+           var datasend = "search_data_m="+ search_data_m + "&token=" + token + "&uid=" + uid;
+            $.ajax({
+            type : 'POST',
+            data : datasend,
+crossDomain: true,
+            url  : 'search.php',
+            success: function(data){
+ShowResult.html('<br><span id="alertdata" class="well alert alert-success"><font color=green>Your Searched Text <b>('+search_data_m+')</b> </font></span>');
+  
+
+                                $("#result_search_m").html(data);
+				//$('#alerts_search_m').delay(5000).fadeOut('slow');
+                                $('#loader_search_m').hide();
+
+
+
+            }
+
+            });
+    });
+});
+
+// end searching
+
+
+
+
+        </script>
+
+
+
+
+
+
+<style>
+
+
+.search_m_btn{
+width:100%;
+height:60px;
+border-radius:20%;
+
+}
+.searching_res{
+position:absolute;
+//position:fixed;
+z-index:999;
+}
+
+@media screen and (max-width: 600px) {
+  .searching_res{
+  //width: 56%;
+ //top: 2px; 
+ top: 20px; 
+margin-left:86px; 
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .searching_res{ 
+  //width: 56%;
+top:20px;
+margin-left:86px;
+  }
+}
+
+.searching_res_p{
+cursor: wait;
+padding: 20px;
+background: #800000;
+color: white;
+border-style: dashed; border-width:2px; border-color: orange;
+}
+.searching_res_p:hover{
+background: black;
+color: white;
+}
+
+
+.searching_res_p1{
+cursor: wait;
+padding: 20px;
+background: red;
+color: white;
+border-style: dashed; border-width:2px; border-color: orange;
+}
+.searching_res_p1:hover{
+background: black;
+color: white;
+}
+
+</style>
+
+<input type="text" class="search_m_btn" name="search_data_m" id="search_data_m" placeholder="Search Audio Call by Audio Title Name etc." />
+
+<div id="loader_search_m" class='myform_search'></div>
+
+<div id="search_text_no"></div>
+<div id="result_search_m" class='searching_res_m myform_search'></div>
+
+
+
+<br><br>
+
+
+</div><br><br>
+
+<br><br>
+
+<!--form ENDS-->
+
+
+        </div>
+        <div class="modal-footer" style="color:black;background:#c1c1c1">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  search data modal ends here -->
+
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_action_edit').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_details').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+
+
+
+</script>
+
+<!-- sentiments Modal starts here-->
+
+<div class="container_action">
+
+  <div class="modal fade " id="myModal_action_edit" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+      <div class="modal-content">
+        <div class="modal-header" style={{color:'black', background:'#ddd'}}>
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+
+          <h4 class="modal-title">View and Edit Contents</h4>
+        </div>
+        <div class="modal-body">
+     
+
+
+
+
+<script>
+
+$(document).ready(function(){
+$('#contents_btn').click(function(){
+		
+var title = $('#a_title').val();
+var messages = $('#a_messages').val();
+var postid = $('#a_postid').val();
+
+
+
+if(title==""){
+alert('There is an Issue with Contents Title..Reload the Page and Try Again.');
+
+}
+
+
+else{
+
+$('#loader_contents').fadeIn(400).html('<br><br><div style="color:white;background:#3b5998;padding:10px;"><br><br><img src="ajax-loader.gif">&nbsp;Please Wait, Data updates in Progress...</div>');
+var datasend = {title:title, messages:messages, postid:postid};	
+		$.ajax({
+			
+			type:'POST',
+			url:'contents_updates.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+                        $('#loader_contents').hide();
+				//$('#result_contents').fadeIn('slow').prepend(msg);
+
+$('#result_contents').html(msg);
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+</script>
+
+
+
+
+<!-- form starts  -->
+
+
+
+
+
+
+
+<h4>Audio Title:  <span class="titlez"></span></h4>
+<b>Audio Name: </b> <span class="namez"></span><br />
+<b>Content: </b> <span class="messagesz"></span><br />
+<b>Real </b> <span class="timerz"></span><br />
+
+<!-- s start-->
+
+<div style='background:#f1f1f1; padding:16px;color:black'>
+
+<h2><center>Edit Content Below</center></h2>
+
+
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="psw">
+Audio Title</label>
+              <input type="text" class="col-sm-12 form-control titley" id="a_title" name="a_title" value="">
+            </div>
+
+
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="psw">
+Content</label>
+              <textarea rows="5" cols="5" class="col-sm-12 form-control messagesy" id="a_messages" name="a_messages" value=""></textarea>
+            </div>
+ <input type="hidden" class="col-sm-12 form-control idy" id="a_postid" name="a_postid" value="">
+
+
+            </div>
+
+
+<style>
+
+.mystyle_css{
+background:purple;color:white;padding:10px;border:none
+}
+
+
+.mystyle_css:hover{
+background:#800000;color:white;
+}
+
+</style>
+
+
+
+
+
+<div class="form-group">
+<div id="loader_contents" class="myform_details"></div>
+
+<div id="result_contents" class="myform_details"></div>
+<br /><br />
+                   
+<button type="button" id="contents_btn" class="mystyle_css" title='Edit Content'>Edit Contents</button>
+</div>
+
+
+
+</div>
+
+
+
+<!-- s ends  -->
+
+
+
+
+
+
+
+<!-- form ends  -->
+
+
+
+
+
+<br /><br />
+<br /><br />
+<br /><br />
+</div>
+
+
+
+        </div>
+        <div class="modal-footer modal_footer_color" style='color:black;background:#ddd'}}>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- edit Modal ends here  -->
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

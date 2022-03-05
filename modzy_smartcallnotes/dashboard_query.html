@@ -1,0 +1,2185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+
+
+var userid_sess_call = sessionStorage.getItem('useridcall');
+//alert(userid_sess_call);
+if (userid_sess_call == null || userid_sess_call == undefined) {
+  alert('Hey You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+var userid_sess_call = sessionStorage.getItem('useridcall');
+var fullname_sess_call = sessionStorage.getItem('fullnamecall');
+var email_sess_call = sessionStorage.getItem('emailcall');
+var ownerid_sess_call = sessionStorage.getItem('owneridcall');
+
+//var vv = sessionStorage.getItem('emailcall');
+//alert(vv);
+
+/*
+
+var rec = "<span>" +
+"<img src='uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: #ec5574;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+*/
+$('.myd_fullname_sess').html(fullname_sess_call);
+$('.myd_userid_sess').html(userid_sess_call);
+//$('.myd_userid_sess_value').val(userid_sess_call).value;
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#3b5998;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #3b5998;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#3b5998;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+.c_btn{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.c_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #3b5998;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+	  
+
+
+	  <li>
+<a href='dashboard.html'>
+<button class="category_post" 
+title="Go Back to Dashboard" >
+<i  style="color:white;font-size:30px;" class="fa fa-globe" aria-hidden="true"></i>Go Back to Dashboard</button></a>
+</li>
+
+
+	  
+
+
+
+           
+
+             
+ <li class="navgate_no">
+<a title=''  style="color:white;font-size:14px;" ><button class="category_post">
+Welcome: <br>(<span class='myd_fullname_sess'></span>)
+</button></a>
+</li>
+
+
+
+</li>       
+<li class="navgate_no"><a title='Logout' href="logout.html" style="color:white;font-size:14px;"><button class="category_post">Logout <span style='font-size:30px;color:white;' class='fa fa-sign-out'></span></button></a></li>
+
+
+
+
+
+
+
+      </ul>
+
+
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+.myform_btn_css{
+background:#ec5574;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+}
+
+
+.myform_btn_css:hover{
+background:orange;color:white;
+
+}
+
+.css_action{
+background:#800000;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+max-width:30%;
+}
+
+
+.css_action:hover{
+background:orange;color:white;
+
+}
+
+
+.css_action1{
+background:#ec5574;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+max-width:30%;
+}
+
+
+.css_action1:hover{
+background:orange;color:white;
+
+}
+
+
+
+
+.css_action2{
+background:purple;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+max-width:30%;
+}
+
+
+.css_action2:hover{
+background:orange;color:white;
+
+}
+
+
+
+.css_action3{
+background:green;
+color:white;
+cursor:pointer;
+border:none;
+padding:10px;
+border-radius:15%;
+text-align:center
+max-width:30%;
+}
+
+
+.css_action3:hover{
+background:orange;color:white;
+
+}
+
+
+
+</style>
+
+<!-- start-->
+
+<div>
+
+
+
+
+<script>
+
+   $(document).ready(function(){
+//$(".reloadPage").click(function(){
+$(document).on( 'click', '.reloadPage', function(){ 
+
+location.reload();
+
+});
+
+});
+
+
+
+
+var url_content1 = window.location.href;
+
+var url_p1 = new URL(url_content1);
+
+var pid = url_p1.searchParams.get("id");
+
+var pidentity = url_p1.searchParams.get("identity");
+
+
+
+
+var user_id = sessionStorage.getItem('useridcall');
+//alert(user_id);
+        var page_row_call =5;
+
+        $(document).ready(function(){
+
+            loadData();
+
+$("#loader_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+
+            $("#loadmore_btn").click(function(){
+
+
+
+  //var id = $("#id").val();
+                var queryid = Number($("#form_queryid").val());
+                var querytotal = Number($("#form_querytotal").val());
+                queryid += page_row_call;
+                if(queryid <= querytotal){
+               
+                    $("#form_queryid").val(queryid);
+                    loadData();
+                }
+
+                if(queryid >= querytotal){
+               
+                   alert('No More Content to Load');
+$("#nomore_content_check").html("<div style='background:purple;color:white;padding:10px;'>No More Content to Load <br> <center><button style='background:#3b5998;border:none;color:white;padding:10px;cursor:pointer' title='Refresh Page' class='reloadPage'>Refresh Page</button></center> </div>");   
+$('#loader_post').hide();
+                }
+
+
+            });
+        });
+
+        function loadData(){
+            var queryid = $("#form_queryid").val();
+            var querytotal = $("#form_querytotal").val();
+            
+
+$("#loader_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Contents <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $.ajax({
+                url:'content_load_query.php',
+                type:'post',
+                data:{queryid:queryid,page_row_call:page_row_call, user_id:user_id, pid:pid, pidentity:pidentity},
+                dataType:'json',
+                success:function(response){
+
+//alert(response);
+
+if(response ==11){
+//alert('This Audio Call/Voice data does not exist');
+$("#pcheck").html("<div style='background:red;color:white;padding:10px;'>This Audio Call/Voice data does not exist....</div>");   
+$("#loader_posts").hide();
+return false;
+}
+           
+
+                    loadAllContent(response);
+
+$("#loader_posts").hide();
+//$("#result_posts1").html(response);
+//setTimeout(function(){ $('#result_posts').html(''); }, 5000);	
+
+
+
+                }
+            });
+
+        }
+
+        function loadAllContent(data){
+
+            var len1 = data.length;
+
+
+
+            for(var i=0; i<len1; i++){
+                if(i == 0){
+                    var querytotal = data[i]['allcount'];
+                    $("#form_querytotal").val(querytotal);
+                }else{
+
+var id = data[i]['id'];
+var title = data[i]['title'];
+var audio_name = data[i]['tname'];
+var messages = data[i]['messages'];
+var messages1 = data[i]['messages1'];
+var timer = data[i]['timer'];
+var userid = data[i]['userid'];
+var ownerid = data[i]['ownerid'];
+var status = data[i]['status'];
+var job_id= data[i]['job_id'];
+var identity = data[i]['identity'];
+
+/*
+if(id != ''){
+var status_color = 'green';
+}
+*/
+
+var rec = "<div  class='well'  id='contents_data' >" +  
+        
+
+//"<img style='border-style: solid; border-width:3px; border-color:#3b5998; width:60px;height:60px; max-width:60px;max-height:60px;border-radius: 50%;' src='uploads/" + userphoto +"' />" +
+
+"<div style='color:black;font-size:18px'><b>Audio Title: </b>"+title+"</div>" +
+ "<div style='font-size:14px;color:black;'><b>Audio Name:</b> " + audio_name + "</div>" +
+ "<div style='font-size:14px;color:black;'><b>Contents:</b> " + messages + "</div>" +
+"<div style='display:none;' align='center'>"+id+"<input type=text name='id' id='id' value='"+title+"'></div>" +
+ 
+  "<span><b> <span style='color:#3b5998' class='fa fa-calendar'></span>Time:</b> </span>" +
+"<b><span data-livestamp='" + timer + "'></span></b><br>"+
+
+"<br><div class='row'><span style=''  data-toggle='modal' data-target='#myModal_action_edit'  title='View and  Contents' data-timer=\""+ timer +"\" data-messages=\""+ messages +"\"  data-id=\""+ id +"\" data-audio_name=\""+ audio_name +"\"  data-userid=\""+ userid +"\" data-ownerid=\""+ ownerid +"\" data-title=\""+ title +"\"  data-status=\""+ status +"\" data-job_id=\""+ job_id +"\"   data-identity=\""+ identity +"\"  class='btn_action css_action col-sm-3'><span style='font-size:20px;color:black;' class='fa fa-plus-globe'></span>View and  Edit Contents </span>"+  
+
+"<span style=''  data-toggle='modal' data-target='#myModal_action_sentiments'  title='Run Contents Sentiments' data-timer=\""+ timer +"\" data-messages=\""+ messages +"\"  data-id=\""+ id +"\" data-audio_name=\""+ audio_name +"\"  data-userid=\""+ userid +"\" data-ownerid=\""+ ownerid +"\" data-title=\""+ title +"\"  data-status=\""+ status +"\" data-job_id=\""+ job_id +"\"   data-identity=\""+ identity +"\"  class='btn_action css_action1 col-sm-3'><span style='font-size:20px;color:black;' class='fa fa-plus-globe'></span>Run Data Sentiments </span>"+  
+
+
+"<span style=''  data-toggle='modal' data-target='#myModal_action_modzy2'  title='Run Contents Entity Name Recognitions' data-timer=\""+ timer +"\" data-messages=\""+ messages +"\"  data-id=\""+ id +"\" data-audio_name=\""+ audio_name +"\"  data-userid=\""+ userid +"\" data-ownerid=\""+ ownerid +"\" data-title=\""+ title +"\"  data-status=\""+ status +"\" data-job_id=\""+ job_id +"\"   data-identity=\""+ identity +"\"  class='btn_action css_action2 col-sm-3'><span style='font-size:20px;color:black;' class='fa fa-plus-globe'></span>Run Contents Entity Name Recognitions </span>"+  
+
+
+"<span style=''  data-toggle='modal' data-target='#myModal_action_summary'  title='Run Contents Summarizations' data-timer=\""+ timer +"\" data-messages=\""+ messages +"\"  data-id=\""+ id +"\" data-audio_name=\""+ audio_name +"\"  data-userid=\""+ userid +"\" data-ownerid=\""+ ownerid +"\" data-title=\""+ title +"\"  data-status=\""+ status +"\" data-job_id=\""+ job_id +"\"   data-identity=\""+ identity +"\"  class='btn_action css_action3 col-sm-3'><span style='font-size:20px;color:black;' class='fa-plus-globe'></span>Run Data Summarization </span>"+  
+"</div>"+
+
+"<div class='row'>"+
+
+
+
+"</div>"+
+
+
+"<div style='background:#eeeeee'>" +
+"</div></div>";
+
+ $("#res_data").append(rec);
+
+$("#loader_posts").hide();
+
+                }
+            }
+        }
+
+
+
+// loading contents ends here
+
+
+
+
+
+
+//start updates
+
+$(document).ready(function(){
+//$('.btn_action').click(function(){
+$(document).on( 'click', '.btn_action', function(){ 
+
+
+
+var id = $(this).data('id');
+var title = $(this).data('title');
+var name = $(this).data('audio_name');
+var userid = $(this).data('userid');
+var ownerid = $(this).data('ownerid');
+var status = $(this).data('status');
+var job_id = $(this).data('job_id');
+var identity = $(this).data('identity');
+var messages = $(this).data('messages');
+var timer = $(this).data('timer');
+
+
+
+$('.idz').html(id);
+$('.titlez').html(title);
+$('.namez').html(name);
+$('.useridz').html(userid);
+$('.statusz').html(status);
+$('.job_idz').html(job_id);
+$('.identityz').html(identity);
+$('.messagesz').html(messages);
+
+
+
+$('.idy').val(id).value;
+$('.titley').val(title).value;
+$('.namey').val(name).value;
+$('.useridy').val(userid).value;
+$('.statusy').val(status).value;
+$('.job_idy').val(job_id).value;
+$('.identityy').val(identity).value;
+$('.messagesy').val(messages).value;
+
+
+
+  var tm= "<span><b> <span style='color:#3b5998' class='fa fa-calendar'></span>Time:</b> </span>" +
+"<b><span data-livestamp='" + timer + "'></span></b><br>";
+$('.timerz').html(tm);
+		
+	})
+
+
+});
+//end updates
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<br><br><br>
+
+
+
+<!-- start loading content --->
+<br />
+<div id="content">
+   
+   
+  
+        <div id="res_data"></div>
+<div id="loader_check"></div>
+<div id="result_check"></div>
+
+
+<div id="pcheck"></div>
+
+        <div id="">
+            <input type="hidden" id="form_queryid" value="0" />
+            <input type="hidden" id="form_querytotal" value="0" />
+
+<div id="loader_posts"></div><br>
+<input style='display:none' type="button" style='width:100%' title='LoadMore Content' class="button myform_btn_css" value="LoadMore Content" id="loadmore_btn" />
+ 
+        </div>
+    </div>
+
+
+
+
+<!-- ends loading contents-->
+
+
+</div>
+<!-- ends-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add data modal starts here -->
+
+
+<div class="container_search_post_modal">
+
+  <div class="modal fade " id="myModal_add" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 pull-right1 modaling_sizing1">
+      <div class="modal-content">
+        <div class="modal-header" style="color:black;background:#c1c1c1">
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+      <h4 class="modal-title">Upload Audio Voice Calls Records</h4>
+        </div>
+        <div class="modal-body">
+
+
+
+<div style='background:#ddd;color:black;padding:10px;border-style: dashed; border-width:2px; border-color: orange;'>
+
+<!--form START-->
+
+
+
+
+<style>
+.upload_progress{
+padding:10px;
+background:green;
+color:white;
+cursor:pointer;
+min-width:30px;
+}
+
+#imageupload_preview
+{
+max-height:200px;
+max-width:200px;
+}
+</style>
+         <script>
+
+
+
+            $(function () {
+                $('#upload_btn').click(function () {
+                     var title = $('#title').val();
+                    var file_fname = $('#file_content').val();
+                    var emailaddress_pot = $('#emailaddress_pot').val();
+
+                  
+
+var userid = sessionStorage.getItem('useridcall');
+var ownerid = sessionStorage.getItem('owneridcall');
+
+// start if validate
+if(file_fname==""){
+alert('please Select .mp3, .flac, .alac audio File to Upload');
+}
+
+else if(title==""){
+alert('please Enter File Title name');
+}
+
+else{
+
+var fname=  $('#file_content').val();
+var ext = fname.split('.').pop();
+//alert(ext);
+
+// add double quotes around the variables
+var fileExtention_quotes = ext;
+fileExtention_quotes = "'"+fileExtention_quotes+"'";
+
+ var allowedtypes = ["mp3", "MP3", "flac", "FLAC", "alac", "ALAC"];
+    if(allowedtypes.indexOf(ext) !== -1){
+//alert('This file is allowed');
+}else{
+alert("Please Upload a Valid .mp3, .flac voice/audio Files");
+return false;
+    }
+
+          var form_data = new FormData();
+          form_data.append('file_content', $('#file_content')[0].files[0]);
+          form_data.append('file_fname', file_fname);
+          form_data.append('title', title);
+          form_data.append('emailaddress_pot', emailaddress_pot);
+form_data.append('userid', userid);
+form_data.append('ownerid', ownerid);
+                    $('.upload_progress').css('width', '0');
+                    //$('#upload_btn').attr('disabled', 'disabled');
+                    $('#loader').fadeIn(400).html('<br><span class="well" style="color:black"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait, Your Data is being Submitted</span>');
+                    $.ajax({
+                        url: 'audio_process.php',
+                        data: form_data,
+                        processData: false,
+                        contentType: false,
+crossDomain: true,
+                        cache: false,
+                        type: 'POST',
+                        xhr: function () {
+                      //var xhr = new window.XMLHttpRequest();
+                            var xhr = $.ajaxSettings.xhr();
+                            xhr.upload.addEventListener("progress", function (event) {
+                                var upload_percent = 0;
+                                var upload_position = event.loaded;
+                                var upload_total  = event.total;
+
+                                if (event.lengthComputable) {
+                                    var upload_percent = upload_position / upload_total;
+                                    upload_percent = parseInt(upload_percent * 100);
+                                  //upload_percent = Math.ceil(upload_position / upload_total * 100);
+                                    $('.upload_progress').css('width', upload_percent + '%');
+                                    $('.upload_progress').text(upload_percent + '%');
+                                }
+                            }, false);
+                            return xhr;
+                        },
+                        success: function (msg) {
+                                $('#box').val('');
+				$('#loader').hide();
+				$('.result_data').fadeIn('slow').prepend(msg);
+				$('#alertdata_uploadfiles').delay(5000).fadeOut('slow');
+                                $('#alerts_reg').delay(5000).fadeOut('slow');
+                                $('#alertdata_uploadfiles2').delay(20000).fadeOut('slow');
+                                //$('#upload_btn').removeAttr('disabled');
+
+
+//strip all html elemnts using jquery
+var html_stripped = jQuery(msg).text();
+//alert(html_stripped);
+
+//check occurrence of word (successfully) from backend output already html stripped.
+var Frombackend = html_stripped;
+var bcount = (Frombackend.match(/successfully/g) || []).length;
+//alert(bcount);
+
+if(bcount > 0){
+//$('#file_fname').val('');
+//$('#title').val('');
+}
+
+
+
+
+                        }
+                    });
+} // end if validate
+                });
+            });
+
+
+
+
+</script>
+
+
+
+
+
+<!--start form-->
+<div class='data_hide'>
+<form id="" method="post">
+
+
+
+<div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="title">
+<span class="fa fa-edit"></span> Audio Title Name</label>
+              <input type="text" class="col-sm-12 form-control" id="title" name="title" placeholder="Enter Audio Title Name">
+            </div>
+
+
+
+<div class="form-group">
+<label style='font-size:16px;padding:6px;'>Upload Audio Call File(.flac or .mp3 file): </label>
+<input style="background:#c1c1c1;" class="col-sm-12 form-control" type="file" id="file_content" name="file_content" />
+</div>
+
+
+
+<style>
+.secured_pot{ display:none; } /* hide because is spam protection */
+</style>
+<input class="secured_pot" type="text" name="emailaddress_pot" id="emailaddress_pot" />
+
+
+
+
+
+                    <div class="form-group">
+                            <div class="upload_progress" style="width:0%">0%</div>
+
+                        <div id="loader"></div>
+                       
+                    </div>
+
+                    <input type="button" id="upload_btn" class="pull-right c_btn" value="Upload Now" />
+                </form>
+<br><br>
+</div>
+
+
+ <div class="result_data"></div>
+<!--form ENDS-->
+
+
+        </div>
+        <div class="modal-footer" style="color:black;background:#c1c1c1">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  Add data modal ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- settings modal starts here -->
+
+
+<div class="container_search_post_modal">
+
+  <div class="modal fade " id="myModal_settings" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 pull-right1 modaling_sizing1">
+      <div class="modal-content">
+        <div class="modal-header" style="color:black;background:#c1c1c1">
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+      <h4 class="modal-title">Application Settings</h4>
+        </div>
+        <div class="modal-body">
+
+
+
+<div style='background:#ddd;color:black;padding:10px;border-style: dashed; border-width:2px; border-color: orange;'>
+
+<!--form START-->
+
+
+
+         <script>
+
+           
+
+$(document).ready(function(){
+var tt=1;
+
+var useridxa = sessionStorage.getItem('useridcall');
+var owneridxa = sessionStorage.getItem('owneridcall');
+
+
+$("#loader_ssx").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait,Loading Settings...</div>');
+var datasend = {tt:tt, useridxa:useridxa, owneridxa:owneridxa};
+
+	
+		$.ajax({
+			
+			type:'POST',
+			url:'settings_load.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader_ssx").hide();
+$("#result_ssx").html(msg);
+//setTimeout(function(){ $('#result_ss').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<!--start form-->
+
+<div id="loader_ssx"></div>
+<div id="result_ssx"></div>
+
+
+<!--form ENDS-->
+
+
+        </div>
+        <div class="modal-footer" style="color:black;background:#c1c1c1">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  settings modal ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_action_edit').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_details').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+
+
+
+</script>
+
+<!-- edit  Modal starts here-->
+
+<div class="container_action">
+
+  <div class="modal fade " id="myModal_action_edit" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+      <div class="modal-content">
+        <div class="modal-header" style={{color:'black', background:'#ddd'}}>
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+
+          <h4 class="modal-title">View and Edit Contents</h4>
+        </div>
+        <div class="modal-body">
+     
+
+
+
+
+<script>
+
+$(document).ready(function(){
+$('#contents_btn').click(function(){
+
+var url_content1x = window.location.href;
+
+var url_p1x = new URL(url_content1x);
+
+var pidx = url_p1x.searchParams.get("id");
+
+var pidentityx = url_p1x.searchParams.get("identity");
+
+
+		
+var title = $('#a_title').val();
+var messages = $('#a_messages').val();
+var postid = $('#a_postid').val();
+
+
+
+if(title==""){
+alert('There is an Issue with Contents Title..Reload the Page and Try Again.');
+
+}
+
+
+else{
+
+$('#loader_contents').fadeIn(400).html('<br><br><div style="color:white;background:#3b5998;padding:10px;"><br><br><img src="ajax-loader.gif">&nbsp;Please Wait, Data updates in Progress...</div>');
+var datasend = {title:title, messages:messages, postid:postid, pidx:pidx, pidentityx:pidentityx};	
+		$.ajax({
+			
+			type:'POST',
+			url:'contents_updates.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+                        $('#loader_contents').hide();
+				//$('#result_contents').fadeIn('slow').prepend(msg);
+
+$('#result_contents').html(msg);
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+</script>
+
+
+
+
+<!-- form starts  -->
+
+
+
+
+
+
+
+<h4>Audio Title:  <span class="titlez"></span></h4>
+<b>Audio Name: </b> <span class="namez"></span><br />
+<b>Content: </b> <span class="messagesz"></span><br />
+<b>Real </b> <span class="timerz"></span><br />
+
+<!-- s start-->
+
+<div style='background:#f1f1f1; padding:16px;color:black'>
+
+<h2><center>Edit Content Below</center></h2>
+
+
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="psw">
+Audio Title</label>
+              <input type="text" class="col-sm-12 form-control titley" id="a_title" name="a_title" value="">
+            </div>
+
+
+
+ <div class="form-group">
+              <label style="padding:6px;font-size:16px;" for="psw">
+Content</label>
+              <textarea rows="5" cols="5" class="col-sm-12 form-control messagesy" id="a_messages" name="a_messages" value=""></textarea>
+            </div>
+ <input type="hidden" class="col-sm-12 form-control idy" id="a_postid" name="a_postid" value="">
+
+
+            </div>
+
+
+<style>
+
+.mystyle_css{
+background:purple;color:white;padding:10px;border:none
+}
+
+
+.mystyle_css:hover{
+background:#800000;color:white;
+}
+
+</style>
+
+
+
+
+
+<div class="form-group">
+<div id="loader_contents" class="myform_details"></div>
+
+<div id="result_contents" class="myform_details"></div>
+<br /><br />
+                   
+<button type="button" id="contents_btn" class="mystyle_css" title='Edit Content'>Edit Contents</button>
+</div>
+
+
+
+</div>
+
+
+
+<!-- s ends  -->
+
+
+
+
+
+
+
+<!-- form ends  -->
+
+
+
+
+
+<br /><br />
+<br /><br />
+<br /><br />
+</div>
+
+
+
+        </div>
+        <div class="modal-footer modal_footer_color" style='color:black;background:#ddd'}}>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- edit Modal ends here  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_action_sentiments').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_modzy').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+
+
+
+</script>
+
+<!-- sentiments Modal starts here-->
+
+<div class="container_action">
+
+  <div class="modal fade " id="myModal_action_sentiments" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+      <div class="modal-content">
+        <div class="modal-header" style={{color:'black', background:'#ddd'}}>
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+
+          <h4 class="modal-title">Run Contents Sentimental Analysis</h4>
+        </div>
+        <div class="modal-body">
+     
+
+
+
+
+<script>
+
+$(document).ready(function(){
+$('#ssx_btn').click(function(){
+
+var uid = sessionStorage.getItem('useridcall');
+
+var url_content1x = window.location.href;
+
+var url_p1x = new URL(url_content1x);
+
+var pidx = url_p1x.searchParams.get("id");
+
+var pidentityx = url_p1x.searchParams.get("identity");
+
+
+		
+var title = $('#b_title').val();
+var messages = $('#b_messages').val();
+var postid = $('#b_postid').val();
+
+
+
+if(title==""){
+alert('There is an Issue with Contents Title..Reload the Page and Try Again.');
+
+}
+
+
+else{
+
+$('#loader_ssxa').fadeIn(400).html('<br><br><div style="color:white;background:#3b5998;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Data is being Processed by Modzy Sentiments...</div>');
+
+var datasend = {title:title, messages:messages, postid:postid, pidx:pidx, pidentityx:pidentityx, uid:uid};	
+		$.ajax({
+			
+			type:'POST',
+			url:'modzy_sentiments.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+                        $('#loader_ssxa').hide();
+				//$('#result_ssxa').fadeIn('slow').prepend(msg);
+
+$('#result_ssxa').html(msg);
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+</script>
+
+
+
+
+<!-- form starts  -->
+
+
+
+
+
+
+
+<h4>Audio Title:  <span class="titlez"></span></h4>
+<b>Audio Name: </b> <span class="namez"></span><br />
+<b>Content: </b> <span class="messagesz"></span><br />
+<b>Real </b> <span class="timerz"></span><br />
+
+<!-- s start-->
+
+<div style='background:#f1f1f1; padding:16px;color:black'>
+
+<h2><center>Run Contents Sentimental Analysis</center></h2>
+<input type="hidden" class="col-sm-12 form-control titley" id="b_title" name="b_title" value="">       
+ <input type="hidden" class="col-sm-12 form-control idy" id="b_postid" name="b_postid" value="">
+
+
+              <input type="hidden" class="col-sm-12 form-control messagesy" id="b_messages" name="b_messages" value="">
+
+
+            </div>
+
+
+<style>
+
+.mystyle_css{
+background:purple;color:white;padding:10px;border:none
+}
+
+
+.mystyle_css:hover{
+background:#800000;color:white;
+}
+
+</style>
+
+
+
+
+
+<div class="form-group">
+<div id="loader_ssxa" class="myform_modzy1z"></div>
+
+<div id="result_ssxa" class="myform_modzy1z"></div>
+<br />
+                   
+<button type="button" id="ssx_btn" class="mystyle_css hide_sentiments_btn" title='Run Contents Sentiments'>Run Contents Sentiments</button>
+</div>
+
+
+
+</div>
+
+
+
+<!-- s ends  -->
+
+
+
+
+
+
+
+<!-- form ends  -->
+
+
+
+
+
+<br /><br />
+<br /><br />
+<br /><br />
+</div>
+
+
+
+        </div>
+        <div class="modal-footer modal_footer_color" style='color:black;background:#ddd'}}>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- sentiments Modal ends here  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_action_sentiments').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_modzy').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+
+
+
+</script>
+
+<!-- summary Modal starts here-->
+
+<div class="container_action">
+
+  <div class="modal fade " id="myModal_action_summary" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+      <div class="modal-content">
+        <div class="modal-header" style={{color:'black', background:'#ddd'}}>
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+
+          <h4 class="modal-title">Run Contents  Summarizations</h4>
+        </div>
+        <div class="modal-body">
+     
+
+
+
+
+<script>
+
+$(document).ready(function(){
+$('#sum_btn').click(function(){
+
+var uid = sessionStorage.getItem('useridcall');
+
+var url_content1x = window.location.href;
+
+var url_p1x = new URL(url_content1x);
+
+var pidx = url_p1x.searchParams.get("id");
+
+var pidentityx = url_p1x.searchParams.get("identity");
+
+
+		
+var title = $('#c_title').val();
+var messages = $('#c_messages').val();
+var postid = $('#c_postid').val();
+
+
+
+if(title==""){
+alert('There is an Issue with Contents Title..Reload the Page and Try Again.');
+
+}
+
+
+else{
+
+$('#loader_ssxas').fadeIn(400).html('<br><br><div style="color:white;background:#3b5998;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Data is being Processed by Modzy Summarisation...</div>');
+
+var datasend = {title:title, messages:messages, postid:postid, pidx:pidx, pidentityx:pidentityx, uid:uid};	
+		$.ajax({
+			
+			type:'POST',
+			url:'modzy_summary.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+                        $('#loader_ssxas').hide();
+				//$('#result_ssxas').fadeIn('slow').prepend(msg);
+
+$('#result_ssxas').html(msg);
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+</script>
+
+
+
+
+<!-- form starts  -->
+
+
+
+
+
+
+
+<h4>Audio Title:  <span class="titlez"></span></h4>
+<b>Audio Name: </b> <span class="namez"></span><br />
+<b>Content: </b> <span class="messagesz"></span><br />
+<b>Real </b> <span class="timerz"></span><br />
+
+<!-- s start-->
+
+<div style='background:#f1f1f1; padding:16px;color:black'>
+
+<h2><center>Contents Summarization Analysis.</center></h2>
+<input type="hidden" class="col-sm-12 form-control titley" id="c_title" name="c_title" value="">       
+ <input type="hidden" class="col-sm-12 form-control idy" id="c_postid" name="c_postid" value="">
+
+
+              <input type="hidden" class="col-sm-12 form-control messagesy" id="c_messages" name="c_messages" value="">
+
+
+            </div>
+
+
+<style>
+
+.mystyle_css{
+background:purple;color:white;padding:10px;border:none
+}
+
+
+.mystyle_css:hover{
+background:#800000;color:white;
+}
+
+</style>
+
+
+
+
+
+<div class="form-group">
+<div id="loader_ssxas" class="myform_modzy1z"></div>
+
+<div id="result_ssxas" class="myform_modzy1z"></div>
+<br />
+                   
+<button type="button" id="sum_btn" class="mystyle_css hide_summary_btn" title='Run Contents Summarizations'>Run Contents Summarizations</button>
+</div>
+
+
+
+</div>
+
+
+
+<!-- s ends  -->
+
+
+
+
+
+
+
+<!-- form ends  -->
+
+
+
+
+
+<br /><br />
+<br /><br />
+<br /><br />
+</div>
+
+
+
+        </div>
+        <div class="modal-footer modal_footer_color" style='color:black;background:#ddd'}}>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Summary Modal ends here  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_action_modzy2').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_modzy2').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+
+
+
+</script>
+
+<!-- Entity Name Modal starts here-->
+
+<div class="container_action">
+
+  <div class="modal fade " id="myModal_action_modzy2" role="dialog">
+    <div class="modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+      <div class="modal-content">
+        <div class="modal-header" style={{color:'black', background:'#ddd'}}>
+ <button type="button" class="pull-right btn btn-default" data-dismiss="modal">Close</button>
+
+          <h4 class="modal-title">Run Entity Name Recognition</h4>
+        </div>
+        <div class="modal-body">
+     
+
+
+Easily Detect Locations, Names of People, Companies, Orgnaizations, agencies, Entities etc. involved in the Audio Call Messages<br><br>
+
+<script>
+
+$(document).ready(function(){
+$('#entity_btn').click(function(){
+
+var uid = sessionStorage.getItem('useridcall');
+
+var url_content1x = window.location.href;
+
+var url_p1x = new URL(url_content1x);
+
+var pidx = url_p1x.searchParams.get("id");
+
+var pidentityx = url_p1x.searchParams.get("identity");
+
+
+		
+var title = $('#e_title').val();
+var messages = $('#e_messages').val();
+var postid = $('#e_postid').val();
+
+
+
+if(title==""){
+alert('There is an Issue with Contents Title..Reload the Page and Try Again.');
+
+}
+
+
+else{
+
+$('#loader_entity').fadeIn(400).html('<br><br><div style="color:white;background:#3b5998;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Data is being Processed by Modzy Name Entity Recognitions...</div>');
+
+var datasend = {title:title, messages:messages, postid:postid, pidx:pidx, pidentityx:pidentityx, uid:uid};	
+		$.ajax({
+			
+			type:'POST',
+			url:'modzy_name_entity.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+                        $('#loader_entity').hide();
+				//$('#result_entity').fadeIn('slow').prepend(msg);
+
+$('#result_entity').html(msg);
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+</script>
+
+
+
+
+<!-- form starts  -->
+
+
+
+
+
+
+
+<h4>Audio Title:  <span class="titlez"></span></h4>
+<b>Audio Name: </b> <span class="namez"></span><br />
+<b>Content: </b> <span class="messagesz"></span><br />
+<b>Real </b> <span class="timerz"></span><br />
+
+<!-- s start-->
+
+<div style='background:#f1f1f1; padding:16px;color:black'>
+
+<h2><center>Contents Entity Name Recognitions</center></h2>
+<input type="hidden" class="col-sm-12 form-control titley" id="e_title" name="e_title" value="">       
+ <input type="hidden" class="col-sm-12 form-control idy" id="e_postid" name="e_postid" value="">
+
+
+              <input type="hidden" class="col-sm-12 form-control messagesy" id="e_messages" name="e_messages" value="">
+
+
+            </div>
+
+
+<style>
+
+.mystyle_css{
+background:purple;color:white;padding:10px;border:none
+}
+
+
+.mystyle_css:hover{
+background:#800000;color:white;
+}
+
+</style>
+
+
+
+
+
+<div class="form-group ">
+<div id="loader_entity" class="myform_modzy2z  data_hide2"></div>
+
+<div id="result_entity" class="myform_modzy2z"></div>
+<br />
+                   
+<button type="button" id="entity_btn" class="mystyle_css data_hide2" title='Run Contents Entity Name Recognitions'>Run Contents Entity Name Recognitions</button>
+</div>
+
+
+
+</div>
+
+
+
+<!-- s ends  -->
+
+
+
+
+
+
+
+<!-- form ends  -->
+
+
+
+
+
+<br /><br />
+<br /><br />
+<br /><br />
+</div>
+
+
+
+        </div>
+        <div class="modal-footer modal_footer_color" style='color:black;background:#ddd'}}>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Entity Name Modal ends here  -->
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
